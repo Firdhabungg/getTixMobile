@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GetTix</string>
+    <string name="gettix">GetTix</string>
+    <string name="login">Login</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="kirim">Kirim</string>
+    <string name="click">Click</string>
+</resources>
