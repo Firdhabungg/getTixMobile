@@ -30,9 +30,22 @@ class SecondActivity : AppCompatActivity() {
 
         val btnImplicit: Button = findViewById(R.id.btnImplicit)
         btnImplicit.setOnClickListener {
-            //intent Implicit
-            val intentYoutube = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com"))
-                startActivity(intentYoutube)
+//            //intent Implicit
+//            val intentYoutube = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com"))
+//                startActivity(intentYoutube)
+            val intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                type = "text/plain"
+            }
+            intent.putExtra(Intent.EXTRA_TEXT, "Sorry, ini pesan dari Dicky untuk teks Aplikasi")
+//            langsung jalankan tanpa pengecekan
+                startActivity(intent)
+//            apabila melakukan pengecekan
+//            if (intent.resolveActivity(packageManager) != null) {
+//                startActivity(intent)
+//            }else {
+//                Snackbar.make(btnImplicit, "Tidak ada aplikasi yang bisa menangani action ini", Snackbar.LENGTH_SHORT).show()
+//            }
         }
 
     }
